@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #969992;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AjouterAppartementController">
+    <children>
+        <Label layoutX="61.0" layoutY="34.0" prefHeight="25.0" prefWidth="343.0" text="Ajouter un bien " textFill="#2f353b">
+            <font>
+                <Font name="Bookman Old Style Bold" size="25.0" />
+            </font>
+        </Label>
+        <Button layoutX="427.0" layoutY="345.0" mnemonicParsing="false" onAction="#confirmerMaison" text="Suivant" />
+        <Button layoutX="27.0" layoutY="345.0" mnemonicParsing="false" onAction="#cancel" prefHeight="25.0" prefWidth="55.0" text="Cancel" />
+        <Button layoutX="206.0" layoutY="345.0" mnemonicParsing="false" text="Retour" />
+        <CheckBox fx:id="meuble" layoutX="85.0" layoutY="147.0" mnemonicParsing="false" text="Meuble" />
+        <CheckBox fx:id="ascenceur" layoutX="85.0" layoutY="117.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="89.0" text="Ascenseur" />
+        <Label layoutX="47.0" layoutY="92.0" prefHeight="17.0" prefWidth="122.0" text="Options :">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <Label layoutX="47.0" layoutY="251.0" prefHeight="17.0" prefWidth="107.0" text="Nombre de piéces">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <TextField fx:id="nbrPieces" layoutX="169.0" layoutY="247.0" prefHeight="25.0" prefWidth="107.0" />
+        <Label layoutX="365.0" layoutY="109.0" prefHeight="17.0" prefWidth="89.0" text="Descriptif">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <ScrollPane layoutX="365.0" layoutY="129.0" prefHeight="153.0" prefWidth="204.0">
+            <content>
+                <TextArea fx:id="descriptif" prefHeight="138.0" prefWidth="191.0" />
+            </content>
+        </ScrollPane>
+      <Label layoutX="47.0" layoutY="216.0" prefHeight="17.0" prefWidth="107.0" text="Etage ">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="47.0" layoutY="183.0" prefHeight="17.0" prefWidth="107.0" text="Emplacement">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="emplacement" layoutX="169.0" layoutY="179.0" prefHeight="25.0" prefWidth="107.0" />
+      <TextField fx:id="etage" layoutX="169.0" layoutY="212.0" prefHeight="25.0" prefWidth="107.0" />
+      <Pane fx:id="echangePane" layoutX="27.0" layoutY="282.0" prefHeight="50.0" prefWidth="294.0">
+         <children>
+            <Label layoutX="26.0" layoutY="18.0" prefHeight="17.0" prefWidth="107.0" text="Wilaya d'echange :">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="wilayaEchange" layoutX="153.0" layoutY="13.0" prefHeight="25.0" prefWidth="128.0" />
+         </children>
+      </Pane>
+      <ImageView fitHeight="31.0" fitWidth="39.0" layoutX="276.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Desktop/tpPics/82361.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="finir" layoutX="509.0" layoutY="345.0" mnemonicParsing="false" onAction="#finir" prefHeight="25.0" prefWidth="55.0" text="Finir" />
+    </children>
+</AnchorPane>

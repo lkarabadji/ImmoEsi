@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #6C6874;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AdminAceuilController">
+   <children>
+      <VBox layoutX="38.0" layoutY="36.0" prefHeight="252.0" prefWidth="202.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#afficherBiens" prefHeight="42.0" prefWidth="211.0" style="-fx-background-color: #969992;" text="Afficher la liste des Bien" />
+            <Button mnemonicParsing="false" onAction="#ajouterBien" prefHeight="44.0" prefWidth="202.0" style="-fx-background-color: #969992;" text="Ajouter un bien" />
+            <Button mnemonicParsing="false" onAction="#ajouterP" prefHeight="48.0" prefWidth="205.0" style="-fx-background-color: #969992;" text="Ajouter Propriètaire" />
+            <Button mnemonicParsing="false" onAction="#afficherArchives" prefHeight="44.0" prefWidth="202.0" style="-fx-background-color: #969992;" text="Afficher la liste des archives" />
+            <Button mnemonicParsing="false" onAction="#afficherProprietaires" prefHeight="38.0" prefWidth="210.0" style="-fx-background-color: #969992;" text="Afficher la liste des proprietaires" />
+            <Button mnemonicParsing="false" onAction="#afficherMsg" prefHeight="38.0" prefWidth="205.0" text="Afficher les Messages" />
+         </children>
+      </VBox>
+      <Label fx:id="Admin" layoutX="379.0" layoutY="311.0" prefHeight="58.0" prefWidth="179.0" style="-fx-background-color: #6C6874;" text="ADMIN" textFill="#969992">
+         <font>
+            <Font name="Arial Black" size="39.0" />
+         </font>
+      </Label>
+      <Button layoutX="93.0" layoutY="319.0" mnemonicParsing="false" onAction="#retour" prefHeight="42.0" prefWidth="189.0" style="-fx-background-color: #969992;" text="Se deconnecter" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="358.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>

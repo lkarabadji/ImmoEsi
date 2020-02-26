@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #969992;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AjouterTerrainController">
+    <children>
+        <Label layoutX="61.0" layoutY="34.0" prefHeight="25.0" prefWidth="343.0" text="Ajouter un bien " textFill="#2f353b">
+            <font>
+                <Font name="Bookman Old Style Bold" size="25.0" />
+            </font>
+        </Label>
+        <Button layoutX="410.0" layoutY="345.0" mnemonicParsing="false" onAction="#confirmer" prefHeight="25.0" prefWidth="89.0" text="Confirmer" />
+        <Button layoutX="27.0" layoutY="345.0" mnemonicParsing="false" onAction="#cancel" prefHeight="25.0" prefWidth="55.0" text="Cancel" />
+        <Button layoutX="91.0" layoutY="345.0" mnemonicParsing="false" onAction="#retour" text="Retour" />
+        <Label layoutX="365.0" layoutY="109.0" prefHeight="17.0" prefWidth="89.0" text="Descriptif">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <ScrollPane layoutX="365.0" layoutY="129.0" prefHeight="153.0" prefWidth="204.0">
+            <content>
+                <TextArea fx:id="descriptif" prefHeight="138.0" prefWidth="191.0" />
+            </content>
+        </ScrollPane>
+        <Label layoutX="27.0" layoutY="216.0" prefHeight="17.0" prefWidth="128.0" text="Nombre de façades">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <Label layoutX="36.0" layoutY="109.0" prefHeight="17.0" prefWidth="107.0" text="Statut juridique">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <TextField fx:id="nbrfacades" layoutX="169.0" layoutY="212.0" prefHeight="25.0" prefWidth="107.0" />
+        <Pane fx:id="echangePane" layoutX="27.0" layoutY="282.0" prefHeight="50.0" prefWidth="294.0">
+            <children>
+                <Label layoutX="26.0" layoutY="18.0" prefHeight="17.0" prefWidth="107.0" text="Wilaya d'echange :">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <ChoiceBox fx:id="wilayaEchange" layoutX="153.0" layoutY="13.0" prefHeight="25.0" prefWidth="128.0" />
+            </children>
+        </Pane>
+      <TextArea fx:id="statutJur" layoutX="154.0" layoutY="109.0" prefHeight="97.0" prefWidth="190.0" />
+      <Button fx:id="finir" layoutX="508.0" layoutY="345.0" mnemonicParsing="false" onAction="#handleFinir" prefHeight="25.0" prefWidth="78.0" text="Finir" />
+    </children>
+</AnchorPane>

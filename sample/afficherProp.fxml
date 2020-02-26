@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane onDragDetected="#debut" onTouchMoved="#debut" prefHeight="420.0" prefWidth="633.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AfficherProp">
+   <children>
+      <ScrollPane layoutX="317.0" layoutY="99.0" prefHeight="208.0" prefWidth="288.0">
+         <content>
+            <GridPane prefHeight="205.0" prefWidth="266.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="153.0" minWidth="10.0" prefWidth="145.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" prefWidth="103.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="34.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label prefHeight="17.0" prefWidth="96.0" text="Nom:" GridPane.rowIndex="1" />
+                  <Label prefHeight="17.0" prefWidth="102.0" text="Prenom :" GridPane.rowIndex="2" />
+                  <Label prefHeight="17.0" prefWidth="94.0" text="Adresse :" GridPane.rowIndex="3" />
+                  <Label prefHeight="17.0" prefWidth="104.0" text="email:" GridPane.rowIndex="5" />
+                  <Label prefHeight="17.0" prefWidth="150.0" text="Numero de telephone:" GridPane.rowIndex="4" />
+                  <Label fx:id="nom" prefHeight="17.0" prefWidth="108.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label fx:id="prenom" prefHeight="17.0" prefWidth="120.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label fx:id="adresse" prefHeight="17.0" prefWidth="122.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Label fx:id="numtel" prefHeight="17.0" prefWidth="115.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Label fx:id="email" prefHeight="17.0" prefWidth="114.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <Label prefHeight="17.0" prefWidth="207.0" text="Informations :">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+         </content>
+      </ScrollPane>
+      <ScrollPane layoutX="60.0" layoutY="81.0" prefHeight="245.0" prefWidth="250.0">
+         <content>
+            <ListView fx:id="listView" onEditStart="#debut" onKeyPressed="#getProprietaire" onMouseClicked="#getProprietaire" prefHeight="225.0" prefWidth="236.0" />
+         </content>
+      </ScrollPane>
+      <Label layoutX="146.0" layoutY="30.0" prefHeight="38.0" prefWidth="309.0" text="Liste des propriètaires :">
+         <font>
+            <Font name="Arial Black" size="22.0" />
+         </font>
+      </Label>
+      <ToolBar fx:id="toolBar" layoutX="175.0" layoutY="345.0" prefHeight="40.0" prefWidth="265.0">
+         <items>
+            <Button mnemonicParsing="false" onAction="#afficherBiensHandle" prefHeight="25.0" prefWidth="168.0" text="Afficher la liste  de ses biens" />
+            <Button mnemonicParsing="false" onAction="#deleteHandle" text="Supprimer" />
+         </items>
+      </ToolBar>
+      <Button fx:id="retour" layoutX="51.0" layoutY="373.0" mnemonicParsing="false" onAction="#retour" text="Retour" />
+      <Button layoutX="34.0" layoutY="333.0" mnemonicParsing="false" onAction="#ajouterP" text="Ajouter un Proprietaire" />
+      <Button fx:id="selectionner" layoutX="455.0" layoutY="361.0" mnemonicParsing="false" onAction="#selection" text="Selectionner" />
+   </children>
+</AnchorPane>
